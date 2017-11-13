@@ -19,9 +19,10 @@
   },
   "scripts": {
     "start": "node server.js",
-    "test": "IP=0.0.0.0 PORT=3030 mocha --timeout 5000 tests/*_test.js",
-    "test-ps":
-      "set IP=0.0.0.0 && node ./node_modules/.bin/mocha ./tests/**/*_test.js"
+    "test": "./node_modules/.bin/mocha ./tests/app_test.js",
+    "test-original":
+      "IP=0.0.0.0 PORT=3030 mocha --timeout 5000 tests/*_test.js",
+    "test-ps": "./node_modules/.bin/mocha ../../tests/**/*_test.js"
   },
   "repository": {
     "type": "git",
